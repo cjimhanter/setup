@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f17">
+  <meta name="description" content="Актуальная конфигурация рабочего и игрового сетапа cjimhanter.">
+  <title>Setup — cjimhanter</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="shell">
+      <nav class="nav">
+        <a class="brand" href="#top">cjimhanter / setup</a>
+        <div class="nav-links">
+          <a href="#pc">PC</a>
+          <a href="#peripherals">Периферия</a>
+          <a href="#connections">Подключения</a>
+          <a href="#upgrades">Апгрейды</a>
+        </div>
+      </nav>
+
+      <div id="top" class="hero-grid">
+        <div>
+          <p class="eyebrow">WORKSTATION & GAMING SETUP</p>
+          <h1>Сетап без магии:<br>что стоит, зачем и куда подключено.</h1>
+          <p class="lead">
+            Основная игровая цель — максимально раскрывать 1080p / 165 Гц в EuroAion 4.6
+            и других лёгких или CPU-зависимых играх. В Baldur’s Gate 3 цель проще:
+            комфортный стабильный геймплей без погони за 165–200 FPS.
+          </p>
+          <div class="chips">
+            <span>AM5</span><span>1080p</span><span>165 Hz</span><span>EuroAion 4.6</span>
+          </div>
+        </div>
+        <aside class="summary-card">
+          <div class="summary-row"><span>Платформа</span><strong>Ryzen 7 7700X / B650</strong></div>
+          <div class="summary-row"><span>Текущая GPU-цель</span><strong>RX 6600 8 GB</strong></div>
+          <div class="summary-row"><span>Монитор</span><strong>HP OMEN 25i</strong></div>
+          <div class="summary-row"><span>Статус</span><strong class="status in-progress">собирается</strong></div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="section" id="pc">
+      <div class="section-head">
+        <div><p class="eyebrow">DESKTOP</p><h2>Настольный ПК</h2></div>
+        <p>Сильная база сейчас, чтобы позже менять RAM и GPU без перестройки всей системы.</p>
+      </div>
+      <div id="pc-grid" class="cards"></div>
+      <div class="note">
+        <strong>Логика сборки.</strong>
+        Ryzen 7 7700X, B650, мощный БП и просторный корпус остаются основой.
+        RX 6600 и 16 ГБ DDR5 можно заменить позже, когда это станет оправдано по цене и задачам.
+      </div>
+    </section>
+
+    <section class="section" id="peripherals">
+      <div class="section-head">
+        <div><p class="eyebrow">DESK</p><h2>Монитор и периферия</h2></div>
+        <p>Всё, чем сетап ощущается каждый день — экран, ввод, звук и рабочее место.</p>
+      </div>
+      <div id="peripheral-grid" class="cards"></div>
+    </section>
+
+    <section class="section" id="connections">
+      <div class="section-head">
+        <div><p class="eyebrow">I/O MAP</p><h2>Карта подключений</h2></div>
+        <p>Фиксируем не только устройство, но и конкретный кабель и порт.</p>
+      </div>
+      <div class="connection-layout">
+        <div id="connections-list" class="connection-list"></div>
+        <aside class="ports">
+          <h3>Доступные порты</h3>
+          <p class="muted">MSI B650 Gaming Plus WiFi, задняя панель:</p>
+          <ul>
+            <li>4× USB-A 5 Гбит/с</li>
+            <li>3× USB-A 10 Гбит/с</li>
+            <li>1× USB-C 20 Гбит/с</li>
+            <li>2.5G Ethernet</li>
+            <li>HDMI / DisplayPort</li>
+            <li>аудиоразъёмы</li>
+          </ul>
+          <p class="muted">ASUS A31 Plus, передняя панель:</p>
+          <ul>
+            <li>2× USB-A 5 Гбит/с</li>
+            <li>1× USB-C 20 Гбит/с</li>
+            <li>комбинированный audio jack</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">NETWORK & SOFTWARE</p><h2>Сеть и софт</h2></div>
+        <p>То, что влияет на ежедневное использование, но не видно внутри корпуса.</p>
+      </div>
+      <div class="two-col">
+        <article class="panel">
+          <h3>Сеть</h3>
+          <dl>
+            <div><dt>Основное подключение</dt><dd>Ethernet</dd></div>
+            <div><dt>Тариф</dt><dd>100 Мбит/с</dd></div>
+            <div><dt>Игровой маршрут</dt><dd>ExitLag для EuroAion</dd></div>
+            <div><dt>Встроенная сеть</dt><dd>2.5G LAN / Wi‑Fi / Bluetooth</dd></div>
+          </dl>
+        </article>
+        <article class="panel">
+          <h3>Софт</h3>
+          <dl>
+            <div><dt>Клавиатура</dt><dd>Razer Synapse 3</dd></div>
+            <div><dt>Мышь</dt><dd>Logitech G HUB</dd></div>
+            <div><dt>EuroAion</dt><dd>Shygo Console / config.cfg / custom UI</dd></div>
+            <div><dt>Маршрутизация</dt><dd>ExitLag</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="upgrades">
+      <div class="section-head">
+        <div><p class="eyebrow">ROADMAP</p><h2>План апгрейдов</h2></div>
+        <p>Приоритет — устранять реальные ограничения, а не менять железо ради цифр.</p>
+      </div>
+      <div id="upgrade-list" class="roadmap"></div>
+    </section>
+
+    <section class="section compact">
+      <div class="panel privacy">
+        <h3>Что здесь намеренно не публикуется</h3>
+        <p>Серийные номера, номера чеков, IP-адреса, учётные данные и другая приватная информация.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <span>cjimhanter / setup</span>
+      <span id="updated"></span>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
