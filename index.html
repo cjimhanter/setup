@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#fffafc">
   <meta name="description" content="Мой игровой и рабочий сетап: PC и периферия.">
   <title>Setup — cjimhanter</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=7">
 </head>
 <body>
   <header class="topbar">
@@ -56,28 +56,46 @@
       </div>
 
       <div class="details">
-        <details>
-          <summary>Подключения <span>кабели и порты</span></summary>
-          <div id="connections-list" class="connections"></div>
-        </details>
-
-        <details>
-          <summary>Сеть и софт <span>Ethernet, ExitLag, Synapse, G HUB</span></summary>
-          <div class="detail-copy">
-            <p><b>Сеть:</b> Ethernet 100 Мбит/с, ExitLag для EuroAion, 2.5G LAN на плате.</p>
-            <p><b>Софт:</b> Razer Synapse 3, Logitech G HUB, Shygo / custom UI.</p>
+        <div class="accordion">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Подключения</span>
+            <span class="accordion-subtitle">кабели и порты</span>
+            <span class="accordion-icon">＋</span>
+          </button>
+          <div class="accordion-panel" hidden>
+            <div id="connections-list" class="connections"></div>
           </div>
-        </details>
+        </div>
 
-        <details>
-          <summary>Апгрейды <span>только когда появится смысл</span></summary>
-          <div id="upgrade-list" class="upgrades"></div>
-        </details>
+        <div class="accordion">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Сеть и софт</span>
+            <span class="accordion-subtitle">Ethernet, ExitLag, Synapse, G HUB</span>
+            <span class="accordion-icon">＋</span>
+          </button>
+          <div class="accordion-panel" hidden>
+            <div class="detail-copy">
+              <p><b>Сеть:</b> Ethernet 100 Мбит/с, ExitLag для EuroAion, 2.5G LAN на плате.</p>
+              <p><b>Софт:</b> Razer Synapse 3, Logitech G HUB, Shygo / custom UI.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Апгрейды</span>
+            <span class="accordion-subtitle">только когда появится смысл</span>
+            <span class="accordion-icon">＋</span>
+          </button>
+          <div class="accordion-panel" hidden>
+            <div id="upgrade-list" class="upgrades"></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer><div class="shell footer"><span>cjimhanter.setup</span><span id="updated"></span></div></footer>
-  <script src="./script.js"></script>
+  <script src="./script.js?v=7"></script>
 </body>
 </html>
