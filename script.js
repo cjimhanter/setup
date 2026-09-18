@@ -1,22 +1,47 @@
-const statusClass = s => ['owned','planned','tbd'].includes(s) ? s : 'tbd';
+const glyphs = {
+  "Монитор":"165",
+  "Клавиатура":"⌨",
+  "Мышь":"G",
+  "Наушники":"G435",
+  "Кресло":"↟",
+  "Коврик":"MAT"
+};
 
-function card(item){
-  return `<article class="card">
-    <div class="card-top">
-      <span class="category">${item.category}</span>
-      <span class="badge ${statusClass(item.status)}">${item.statusLabel}</span>
+function specRow(item){
+  return `<div class="spec-row">
+    <div class="spec-kind">${item.category}</div>
+    <div class="spec-name">
+      ${item.name}
+      <span class="spec-meta">${item.meta || ''}</span>
     </div>
-    <h3>${item.name}</h3>
-    <p class="meta">${item.meta || ''}</p>
-    <div class="bottom"><span class="price">${item.price || ''}</span></div>
+    <span class="spec-state">${item.statusLabel}</span>
+  </div>`;
+}
+
+function gearCard(item, index){
+  const wide = index < 2 ? ' wide' : '';
+  const glyph = glyphs[item.category] || item.category.slice(0,3).toUpperCase();
+  const small = glyph.length > 3 ? ' small' : '';
+  return `<article class="gear-card${wide}">
+    <div class="gear-media">
+      <div class="gear-glyph${small}">${glyph}</div>
+    </div>
+    <div class="gear-body">
+      <span class="gear-category">${item.category}</span>
+      <h3>${item.name}</h3>
+      <p>${item.meta || ''}</p>
+      <span class="gear-badge">${item.statusLabel}</span>
+    </div>
   </article>`;
 }
 
 fetch('./data/setup.json')
   .then(r => r.json())
   .then(data => {
-    document.querySelector('#pc-grid').innerHTML = data.pc.map(card).join('');
-    document.querySelector('#peripheral-grid').innerHTML = data.peripherals.map(card).join('');
+    document.querySelector('#pc-list').innerHTML = data.pc.map(specRow).join('');
+
+    const gear = data.peripherals.filter(x => !['Монитор','Кресло','Коврик'].includes(x.category));
+    document.querySelector('#gear-grid').innerHTML = gear.map(gearCard).join('');
 
     document.querySelector('#connections-list').innerHTML = data.connections.map(x => `
       <div class="connection">
@@ -26,15 +51,12 @@ fetch('./data/setup.json')
       </div>`).join('');
 
     document.querySelector('#upgrade-list').innerHTML = data.upgrades.map(x => `
-      <article class="roadmap-item">
-        <div class="roadmap-num">${x.n}</div>
+      <div class="upgrade-item">
+        <div class="upgrade-num">${x.n}</div>
         <div><strong>${x.name}</strong><p>${x.why}</p></div>
-        <strong>${x.when}</strong>
-      </article>`).join('');
+        <span class="upgrade-when">${x.when}</span>
+      </div>`).join('');
 
     document.querySelector('#updated').textContent = 'Обновлено: ' + data.updated;
   })
-  .catch(err => {
-    console.error(err);
-    document.querySelector('#pc-grid').innerHTML = '<p>Не удалось загрузить data/setup.json</p>';
-  });
+  .catch(err => console.error('setup data:', err));
