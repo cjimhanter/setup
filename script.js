@@ -6,5 +6,17 @@ fetch('./data/setup.json').then(r=>r.json()).then(d=>{
  document.querySelector('#connections-list').innerHTML=d.connections.map(x=>`<div class="connection"><div><strong>${x.device}</strong><small>${x.detail}</small></div><div class="arrow">→</div><div><strong>${x.target}</strong><small>${x.port}</small></div></div>`).join('');
  document.querySelector('#upgrade-list').innerHTML=d.upgrades.map(x=>`<div class="upgrade"><div><strong>${x.name}</strong><small>${x.why}</small></div></div>`).join('');
  document.querySelector('#updated').textContent='Обновлено: '+d.updated;
- document.querySelectorAll('details').forEach(x=>x.open=false);
+
+ document.querySelectorAll('.accordion-trigger').forEach(button=>{
+   button.setAttribute('aria-expanded','false');
+   const panel=button.nextElementSibling;
+   panel.hidden=true;
+   button.querySelector('.accordion-icon').textContent='＋';
+   button.addEventListener('click',()=>{
+     const willOpen=button.getAttribute('aria-expanded')!=='true';
+     button.setAttribute('aria-expanded',String(willOpen));
+     panel.hidden=!willOpen;
+     button.querySelector('.accordion-icon').textContent=willOpen?'−':'＋';
+   });
+ });
 });
