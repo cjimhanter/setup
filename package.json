@@ -1,0 +1,16 @@
+{
+  "name": "cjimhanter-setup",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "playwright test",
+    "check": "node --check script.js && node --check scripts/serve.mjs && node --check scripts/build.mjs && node --check playwright.config.js"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0"
+  }
+}
