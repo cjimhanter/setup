@@ -1,0 +1,33 @@
+{
+  "updated": "2026-09-18",
+  "pc": [
+    {"category":"CPU","name":"AMD Ryzen 7 7700X","meta":"AM5 · 8C/16T","status":"owned","statusLabel":"Куплено","price":"14 000 ₽"},
+    {"category":"Motherboard","name":"MSI B650 Gaming Plus WiFi","meta":"ATX · B650 · Wi‑Fi","status":"owned","statusLabel":"Куплено","price":"комплект"},
+    {"category":"PSU","name":"FSP Hydro GT Pro 1000W Gold","meta":"1000 W · 80+ Gold","status":"owned","statusLabel":"Куплено","price":"комплект"},
+    {"category":"SSD","name":"Samsung 980 500 GB NVMe","meta":"Системный SSD","status":"owned","statusLabel":"Куплено","price":"комплект"},
+    {"category":"RAM","name":"Kingston FURY Beast KF552C40BBK2-16","meta":"16 GB · 2×8 · DDR5-5200 CL40","status":"planned","statusLabel":"Рассматривается","price":"24 000 ₽"},
+    {"category":"GPU","name":"ASRock Radeon RX 6600 Challenger D 8GB","meta":"8 GB GDDR6 · временная/рациональная GPU","status":"planned","statusLabel":"Рассматривается","price":"15 000 ₽"},
+    {"category":"Case","name":"ASUS A31 Plus","meta":"ATX · 4× ARGB fans","status":"planned","statusLabel":"Рассматривается","price":"7 000 ₽"},
+    {"category":"Cooler","name":"Thermalright Peerless Assassin 120 Vision MAX ARGB","meta":"Dual-tower · ~164 mm","status":"planned","statusLabel":"Рассматривается","price":"5 000 ₽"}
+  ],
+  "peripherals": [
+    {"category":"Monitor","name":"HP OMEN 25i","meta":"1920×1080 · 165 Hz","status":"owned","statusLabel":"Есть","price":""},
+    {"category":"Keyboard","name":"Razer BlackWidow V4 Yellow","meta":"Razer Synapse 3","status":"owned","statusLabel":"Есть","price":"≈5 000 ₽"},
+    {"category":"Mouse","name":"Logitech G502 X","meta":"Logitech G HUB","status":"owned","statusLabel":"Есть","price":""},
+    {"category":"Headset","name":"Logitech G435 LIGHTSPEED","meta":"LIGHTSPEED / Bluetooth","status":"owned","statusLabel":"Есть","price":""},
+    {"category":"Chair","name":"YEELER","meta":"Точная модель ещё уточняется","status":"owned","statusLabel":"Есть","price":"4 500 ₽"},
+    {"category":"Deskmat","name":"TBD","meta":"Тканевый коврик, точная модель ещё не зафиксирована","status":"tbd","statusLabel":"Уточнить","price":""}
+  ],
+  "connections": [
+    {"device":"HP OMEN 25i","detail":"основной монитор","target":"RX 6600 → видеовыход","port":"Кабель/порт уточнить"},
+    {"device":"Razer BlackWidow V4 Yellow","detail":"клавиатура","target":"Rear USB-A","port":"Конкретный порт уточнить"},
+    {"device":"Logitech G502 X","detail":"мышь","target":"Rear USB-A","port":"Конкретный порт уточнить"},
+    {"device":"Logitech G435","detail":"гарнитура","target":"LIGHTSPEED USB / Bluetooth","port":"Способ подключения уточнить"},
+    {"device":"Ethernet","detail":"основная сеть","target":"MSI B650 → 2.5G LAN","port":"RJ-45"}
+  ],
+  "upgrades": [
+    {"n":"1","name":"NVMe SSD 1–2 TB","why":"500 GB быстро станет тесно для Windows, игр и рабочих файлов.","when":"по необходимости"},
+    {"n":"2","name":"32 GB DDR5-6000 CL30–36 EXPO","why":"Заменить временные 2×8, когда рынок DDR5 станет разумнее.","when":"после RAM-кризиса"},
+    {"n":"3","name":"Более мощная GPU","why":"RX 6600 оставляем, пока она покрывает 1080p и реальные игровые задачи.","when":"когда перестанет хватать"}
+  ]
+}
