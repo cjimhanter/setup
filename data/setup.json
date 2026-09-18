@@ -1,33 +1,57 @@
 {
   "updated": "18 сентября 2026",
   "pc": [
-    {"category":"Процессор","name":"AMD Ryzen 7 7700X","meta":"AM5 · 8 ядер / 16 потоков","status":"owned","statusLabel":"Уже есть","price":"14 000 ₽"},
-    {"category":"Материнская плата","name":"MSI B650 Gaming Plus WiFi","meta":"ATX · B650 · Wi‑Fi","status":"owned","statusLabel":"Уже есть","price":"в комплекте"},
-    {"category":"Блок питания","name":"FSP Hydro GT Pro 1000W Gold","meta":"1000 Вт · 80+ Gold","status":"owned","statusLabel":"Уже есть","price":"в комплекте"},
-    {"category":"SSD","name":"Samsung 980 500 GB NVMe","meta":"Основной системный накопитель","status":"owned","statusLabel":"Уже есть","price":"в комплекте"},
-    {"category":"Оперативная память","name":"Kingston FURY Beast KF552C40BBK2-16","meta":"16 ГБ · 2×8 · DDR5-5200 CL40","status":"planned","statusLabel":"Планирую","price":"24 000 ₽"},
-    {"category":"Видеокарта","name":"ASRock Radeon RX 6600 Challenger D 8GB","meta":"8 ГБ GDDR6 · вариант для 1080p","status":"planned","statusLabel":"Планирую","price":"15 000 ₽"},
-    {"category":"Корпус","name":"ASUS A31 Plus","meta":"ATX · 4 ARGB-вентилятора","status":"planned","statusLabel":"Планирую","price":"7 000 ₽"},
-    {"category":"Охлаждение","name":"Thermalright Peerless Assassin 120 Vision MAX ARGB","meta":"Двухбашенный кулер · около 164 мм","status":"planned","statusLabel":"Планирую","price":"5 000 ₽"}
+    {"category":"Процессор","name":"AMD Ryzen 7 7700X","meta":"AM5 · 8 ядер / 16 потоков","statusLabel":"Уже есть"},
+    {"category":"Материнская плата","name":"MSI B650 Gaming Plus WiFi","meta":"ATX · B650 · Wi‑Fi","statusLabel":"Уже есть"},
+    {"category":"Блок питания","name":"FSP Hydro GT Pro 1000W Gold","meta":"1000 Вт · 80+ Gold","statusLabel":"Уже есть"},
+    {"category":"SSD","name":"Samsung 980 500 GB NVMe","meta":"системный накопитель","statusLabel":"Уже есть"},
+    {"category":"Оперативная память","name":"Kingston FURY Beast KF552C40BBK2-16","meta":"16 ГБ · 2×8 · DDR5-5200 CL40","statusLabel":"Планирую"},
+    {"category":"Корпус","name":"ASUS A31 Plus","meta":"ATX · 4 ARGB-вентилятора","statusLabel":"Планирую"}
   ],
-  "peripherals": [
-    {"category":"Монитор","name":"HP OMEN 25i","meta":"1920×1080 · 165 Гц","status":"owned","statusLabel":"Использую","price":""},
-    {"category":"Клавиатура","name":"Razer BlackWidow V4 Yellow","meta":"Razer Synapse 3","status":"owned","statusLabel":"Использую","price":"≈5 000 ₽"},
-    {"category":"Мышь","name":"Logitech G502 X","meta":"Logitech G HUB","status":"owned","statusLabel":"Использую","price":""},
-    {"category":"Наушники","name":"Logitech G435 LIGHTSPEED","meta":"Беспроводная гарнитура · LIGHTSPEED / Bluetooth","status":"owned","statusLabel":"Использую","price":""},
-    {"category":"Кресло","name":"YEELER","meta":"Точную модель ещё добавлю","status":"owned","statusLabel":"Использую","price":"4 500 ₽"},
-    {"category":"Коврик","name":"Пока без модели","meta":"Тканевый deskmat · точную модель добавлю позже","status":"tbd","statusLabel":"Уточню","price":""}
+  "gear": [
+    {
+      "category":"MONITOR",
+      "name":"HP OMEN 25i",
+      "meta":"24.5″ · 1920×1080 · 165 Гц",
+      "image":"https://www.hp.com/fr-fr/shop/Html/Merch/Images/c07064328_1750x1285.jpg",
+      "url":"https://www.hp.com/gb-en/gaming-pc/displays/omen-25i.html",
+      "className":"monitor-card"
+    },
+    {
+      "category":"KEYBOARD",
+      "name":"Razer BlackWidow V4",
+      "meta":"Razer Yellow · full-size · Chroma RGB",
+      "image":"https://assets3.razerzone.com/4VeppnBPnufbXFEUZqgOX3lf81g%3D/500x500/https%3A%2F%2Fmedias-p1.phoenix.razer.com%2Fsys-master-phoenix-images-container%2Fh36%2Fh5a%2F9640099184670%2Fblackwidow-v4-2-500x500.png",
+      "url":"https://www.razer.com/gb-en/gaming-keyboards/razer-blackwidow-v4/RZ03-04691800-R3M1",
+      "className":"keyboard-card"
+    },
+    {
+      "category":"MOUSE",
+      "name":"Logitech G502 X",
+      "meta":"wired · HERO 25K · LIGHTFORCE",
+      "image":"https://resource.logitechg.com/w_544%2Ch_466%2Car_7%3A6%2Cc_pad%2Cq_auto%2Cf_auto%2Cdpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g502x-corded/gallery/g502x-corded-gallery-1-black.png",
+      "url":"https://www.logitechg.com/en-us/shop/p/g502-x-wired-lightforce.910-006136",
+      "className":"mouse-card"
+    },
+    {
+      "category":"HEADSET",
+      "name":"Logitech G435 LIGHTSPEED",
+      "meta":"LIGHTSPEED · Bluetooth · 165 г",
+      "image":"https://resource.logitechg.com/w_544%2Ch_466%2Car_7%3A6%2Cc_pad%2Cq_auto%2Cf_auto%2Cdpr_1.0/d_transparent.gif/content/dam/gaming/en/products/g435/2025/gallery/g435-3qtr-front-left-angle-black-gallery-1.png",
+      "url":"https://www.logitechg.com/en-gb/shop/p/g435-wireless-bluetooth-gaming-headset",
+      "className":"headset-card"
+    }
   ],
   "connections": [
     {"device":"HP OMEN 25i","detail":"основной монитор","target":"Видеокарта","port":"кабель и конкретный порт добавлю после сборки"},
-    {"device":"Razer BlackWidow V4 Yellow","detail":"клавиатура","target":"USB-A на задней панели","port":"конкретный порт зафиксирую"},
+    {"device":"Razer BlackWidow V4","detail":"клавиатура","target":"USB-A на задней панели","port":"конкретный порт зафиксирую"},
     {"device":"Logitech G502 X","detail":"мышь","target":"USB-A на задней панели","port":"конкретный порт зафиксирую"},
     {"device":"Logitech G435","detail":"наушники","target":"LIGHTSPEED USB / Bluetooth","port":"способ подключения уточню"},
     {"device":"Ethernet","detail":"основной интернет","target":"2.5G LAN на материнской плате","port":"RJ-45"}
   ],
   "upgrades": [
-    {"n":"1","name":"SSD на 1–2 ТБ","why":"500 ГБ хватит на старт, но игры и рабочие файлы быстро займут место.","when":"когда станет тесно"},
-    {"n":"2","name":"32 ГБ DDR5-6000 CL30–36 EXPO","why":"Текущие 16 ГБ рассматриваю как временный вариант из-за цен на DDR5.","when":"когда рынок успокоится"},
-    {"n":"3","name":"Более мощная видеокарта","why":"RX 6600 остаётся, пока меня устраивает FPS в 1080p. Менять заранее смысла нет.","when":"когда реально не хватит"}
+    {"n":"1","name":"SSD на 1–2 ТБ","why":"500 ГБ хватит на старт, но игры быстро займут место.","when":"когда станет тесно"},
+    {"n":"2","name":"32 ГБ DDR5-6000 CL30–36","why":"16 ГБ — временный вариант на текущем рынке DDR5.","when":"когда рынок успокоится"},
+    {"n":"3","name":"Более мощная видеокарта","why":"RX 6600 остаётся, пока меня устраивает 1080p.","when":"когда реально не хватит"}
   ]
 }
