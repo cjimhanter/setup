@@ -1,12 +1,3 @@
-const glyphs = {
-  "Монитор":"165",
-  "Клавиатура":"⌨",
-  "Мышь":"G",
-  "Наушники":"G435",
-  "Кресло":"↟",
-  "Коврик":"MAT"
-};
-
 function specRow(item){
   return `<div class="spec-row">
     <div class="spec-kind">${item.category}</div>
@@ -18,30 +9,24 @@ function specRow(item){
   </div>`;
 }
 
-function gearCard(item, index){
-  const wide = index < 2 ? ' wide' : '';
-  const glyph = glyphs[item.category] || item.category.slice(0,3).toUpperCase();
-  const small = glyph.length > 3 ? ' small' : '';
-  return `<article class="gear-card${wide}">
+function gearCard(item){
+  return `<a class="gear-card ${item.className || ''}" href="${item.url}" target="_blank" rel="noreferrer">
     <div class="gear-media">
-      <div class="gear-glyph${small}">${glyph}</div>
+      <img src="${item.image}" alt="${item.name}" loading="lazy">
     </div>
     <div class="gear-body">
       <span class="gear-category">${item.category}</span>
       <h3>${item.name}</h3>
       <p>${item.meta || ''}</p>
-      <span class="gear-badge">${item.statusLabel}</span>
     </div>
-  </article>`;
+  </a>`;
 }
 
 fetch('./data/setup.json')
   .then(r => r.json())
   .then(data => {
     document.querySelector('#pc-list').innerHTML = data.pc.map(specRow).join('');
-
-    const gear = data.peripherals.filter(x => !['Монитор','Кресло','Коврик'].includes(x.category));
-    document.querySelector('#gear-grid').innerHTML = gear.map(gearCard).join('');
+    document.querySelector('#gear-grid').innerHTML = data.gear.map(gearCard).join('');
 
     document.querySelector('#connections-list').innerHTML = data.connections.map(x => `
       <div class="connection">
