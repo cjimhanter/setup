@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fff7fb">
-  <meta name="description" content="Мой игровой и рабочий сетап — ПК, монитор и периферия.">
-  <title>My Setup — cjimhanter</title>
+  <meta name="theme-color" content="#fffafc">
+  <meta name="description" content="Мой игровой и рабочий сетап: PC и периферия.">
+  <title>Setup — cjimhanter</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="topbar">
     <div class="shell nav">
-      <a class="brand" href="#top">cjimhanter<span>.setup</span></a>
-      <nav class="nav-links">
-        <a href="#pc">PC</a>
+      <a class="brand" href="#top">cjimhanter<span>setup</span></a>
+      <nav>
         <a href="#gear">Gear</a>
-        <a href="#desk">Desk</a>
+        <a href="#pc">PC</a>
         <a href="#details">Details</a>
       </nav>
     </div>
@@ -23,182 +22,72 @@
 
   <main id="top">
     <section class="hero shell">
-      <div class="hero-copy">
-        <span class="pill">MY SETUP</span>
-        <h1>Всё, на чём я<br><em>играю и работаю.</em></h1>
-        <p class="hero-text">
-          Если ты пришёл со стрима — здесь весь актуальный сетап без лишнего:
-          компьютер, монитор, периферия и несколько технических деталей.
-        </p>
-        <div class="hero-tags">
-          <span>1080p</span>
-          <span>165 Hz</span>
-          <span>EuroAion 4.6</span>
-          <span>Baldur’s Gate 3</span>
-        </div>
-      </div>
-
-      <a class="hero-product" href="https://www.asus.com/uk/motherboards-components/cases/asus/asus-a31-plus-case/" target="_blank" rel="noreferrer">
-        <div class="hero-product-bg"></div>
-        <img
-          src="https://dlcdnwebimgs.asus.com/files/media/fa00bc94-c735-4405-b57b-3ff92217597b/v1/img/asus-a31-plus-boundless.png"
-          alt="ASUS A31 Plus"
-          fetchpriority="high">
-        <div class="hero-caption">
-          <span>PC CASE</span>
-          <strong>ASUS A31 Plus</strong>
-          <small>основа будущей сборки</small>
-        </div>
-      </a>
-    </section>
-
-    <section class="section shell" id="pc">
-      <div class="section-title">
-        <span>01</span>
-        <div>
-          <p>PC BUILD</p>
-          <h2>Компьютер</h2>
-        </div>
-      </div>
-
-      <div class="pc-editorial">
-        <div class="pc-featured">
-          <a class="product-shot gpu-shot" href="https://oc.asrock.com/Graphics-Card/AMD/Radeon%20RX%206600%20Challenger%20D%208GB/" target="_blank" rel="noreferrer">
-            <div class="product-image-wrap">
-              <img
-                src="https://oc.asrock.com/Graphics-Card/photo/Radeon%20RX%206600%20Challenger%20D%208GB%28M1%29.png"
-                alt="ASRock Radeon RX 6600 Challenger D 8GB"
-                loading="lazy">
-            </div>
-            <div class="product-copy">
-              <span>GPU</span>
-              <h3>ASRock Radeon RX 6600 Challenger D</h3>
-              <p>8 ГБ GDDR6 · текущий вариант под 1080p</p>
-            </div>
-          </a>
-
-          <a class="product-shot cooler-shot" href="https://www.thermalright.com/product/peerless-assassin-120-vision-max-argb-black/" target="_blank" rel="noreferrer">
-            <div class="product-image-wrap">
-              <img
-                src="https://www.thermalright.com/wp-content/uploads/2026/08/peerless-assassin-120-vision-max-argb-black.png"
-                alt="Thermalright Peerless Assassin 120 Vision MAX ARGB Black"
-                loading="lazy">
-            </div>
-            <div class="product-copy">
-              <span>COOLER</span>
-              <h3>Peerless Assassin 120 Vision MAX</h3>
-              <p>двухбашенный кулер · дисплей · ARGB</p>
-            </div>
-          </a>
-        </div>
-
-        <div>
-          <div class="pc-intro">
-            <span class="soft-label">CURRENT BUILD</span>
-            <h3>Сильная AM5-база, а дорогие апгрейды — только когда они реально понадобятся.</h3>
-          </div>
-          <div id="pc-list" class="spec-list"></div>
-        </div>
-      </div>
+      <p class="eyebrow">MY SETUP</p>
+      <h1>Всё, чем я пользуюсь<br><em>для игр и работы.</em></h1>
+      <p class="intro">Актуальная конфигурация со стрима — без длинных описаний и каталога коробок.</p>
+      <div class="tags"><span>1080p</span><span>165 Hz</span><span>EuroAion 4.6</span><span>Baldur’s Gate 3</span></div>
     </section>
 
     <section class="section shell" id="gear">
-      <div class="section-title">
-        <span>02</span>
-        <div>
-          <p>GEAR</p>
-          <h2>Периферия</h2>
-        </div>
+      <div class="heading">
+        <div><p>GEAR</p><h2>Периферия</h2></div>
+        <span>То, что чаще всего спрашивают на стриме.</span>
       </div>
-
-      <div id="gear-grid" class="gear-editorial"></div>
+      <div id="gear-grid" class="gear-grid"></div>
     </section>
 
-    <section class="section shell" id="desk">
-      <div class="section-title">
-        <span>03</span>
-        <div>
-          <p>DESK</p>
-          <h2>Рабочее место</h2>
-        </div>
+    <section class="section shell" id="pc">
+      <div class="heading">
+        <div><p>PC</p><h2>Сборка</h2></div>
+        <span>AM5-база с возможностью спокойно обновить память и видеокарту позже.</span>
       </div>
 
-      <div class="desk-simple">
-        <article>
-          <span>CHAIR</span>
-          <h3>YEELER</h3>
-          <p>Точную модель и фото добавлю, когда зафиксируем конкретную версию.</p>
-        </article>
-        <article>
-          <span>DESKMAT</span>
-          <h3>Deskmat</h3>
-          <p>Здесь лучше будет смотреться твоё реальное фото, а не случайная картинка товара.</p>
-        </article>
-        <article>
-          <span>DESK</span>
-          <h3>Стол</h3>
-          <p>Добавим размеры, модель и фото всего рабочего места.</p>
-        </article>
+      <article class="pc-card">
+        <a class="case-photo" href="https://www.asus.com/uk/motherboards-components/cases/asus/asus-a31-plus-case/" target="_blank" rel="noreferrer">
+          <img src="https://dlcdnwebimgs.asus.com/files/media/fa00bc94-c735-4405-b57b-3ff92217597b/v1/img/asus-a31-plus-boundless.png"
+               alt="ASUS A31 Plus" loading="lazy">
+          <div><small>CASE</small><strong>ASUS A31 Plus</strong></div>
+        </a>
+        <div id="pc-list" class="spec-list"></div>
+      </article>
+    </section>
+
+    <section class="section shell small-section" id="desk">
+      <div class="heading">
+        <div><p>DESK</p><h2>Рабочее место</h2></div>
+      </div>
+      <div class="desk-line">
+        <div><small>CHAIR</small><strong>YEELER</strong><span>точную модель добавлю позже</span></div>
+        <div><small>DESKMAT</small><strong>Deskmat</strong><span>сюда лучше поставить реальное фото</span></div>
+        <div><small>DESK</small><strong>Стол</strong><span>модель и размеры ещё зафиксируем</span></div>
       </div>
     </section>
 
-    <section class="section shell details-section" id="details">
-      <div class="section-title">
-        <span>04</span>
-        <div>
-          <p>DETAILS</p>
-          <h2>Если хочется подробнее</h2>
-        </div>
+    <section class="section shell small-section" id="details">
+      <div class="heading">
+        <div><p>DETAILS</p><h2>Подробности</h2></div>
       </div>
-
-      <div class="details-grid">
-        <details open>
-          <summary>
-            <span>Что куда подключено</span>
-            <small>кабели и порты</small>
-          </summary>
+      <div class="details">
+        <details>
+          <summary>Подключения <span>кабели и порты</span></summary>
           <div id="connections-list" class="connections"></div>
         </details>
-
         <details>
-          <summary>
-            <span>Сеть и программы</span>
-            <small>Ethernet, ExitLag, Synapse, G HUB</small>
-          </summary>
-          <div class="detail-columns">
-            <div>
-              <h4>Сеть</h4>
-              <p><b>Ethernet</b> · 100 Мбит/с</p>
-              <p><b>ExitLag</b> · для EuroAion</p>
-              <p><b>2.5G LAN</b> · на материнской плате</p>
-            </div>
-            <div>
-              <h4>Софт</h4>
-              <p><b>Razer Synapse 3</b> · клавиатура</p>
-              <p><b>Logitech G HUB</b> · мышь</p>
-              <p><b>Shygo / custom UI</b> · Aion</p>
-            </div>
+          <summary>Сеть и софт <span>Ethernet, ExitLag, Synapse, G HUB</span></summary>
+          <div class="detail-copy">
+            <p><b>Сеть:</b> Ethernet 100 Мбит/с, ExitLag для EuroAion, 2.5G LAN на плате.</p>
+            <p><b>Софт:</b> Razer Synapse 3, Logitech G HUB, Shygo / custom UI.</p>
           </div>
         </details>
-
         <details>
-          <summary>
-            <span>Будущие апгрейды</span>
-            <small>только по необходимости</small>
-          </summary>
-          <div id="upgrade-list" class="upgrade-list"></div>
+          <summary>Апгрейды <span>только когда появится смысл</span></summary>
+          <div id="upgrade-list" class="upgrades"></div>
         </details>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="shell footer-inner">
-      <span>cjimhanter.setup</span>
-      <span id="updated"></span>
-    </div>
-  </footer>
-
+  <footer><div class="shell footer"><span>cjimhanter.setup</span><span id="updated"></span></div></footer>
   <script src="./script.js"></script>
 </body>
 </html>
