@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fff7fb">
-  <meta name="description" content="Мой игровой и рабочий сетап — ПК, монитор, периферия и подключения.">
+  <meta name="description" content="Мой игровой и рабочий сетап — ПК, монитор и периферия.">
   <title>My Setup — cjimhanter</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -25,57 +25,31 @@
     <section class="hero shell">
       <div class="hero-copy">
         <span class="pill">MY SETUP</span>
-        <h1>То, на чём я<br><em>играю и работаю.</em></h1>
+        <h1>Всё, на чём я<br><em>играю и работаю.</em></h1>
         <p class="hero-text">
-          Актуальный сетап со стрима: ПК, монитор, мышь, клавиатура,
-          наушники и всё остальное — в одном месте.
+          Если ты пришёл со стрима — здесь весь актуальный сетап без лишнего:
+          компьютер, монитор, периферия и несколько технических деталей.
         </p>
-        <div class="hero-meta">
+        <div class="hero-tags">
           <span>1080p</span>
-          <i></i>
           <span>165 Hz</span>
-          <i></i>
           <span>EuroAion 4.6</span>
+          <span>Baldur’s Gate 3</span>
         </div>
       </div>
 
-      <div class="setup-visual" aria-label="Pink desk setup illustration">
-        <div class="visual-glow glow-one"></div>
-        <div class="visual-glow glow-two"></div>
-
-        <div class="monitor">
-          <div class="monitor-screen">
-            <div class="screen-orb orb-a"></div>
-            <div class="screen-orb orb-b"></div>
-            <span>165 Hz</span>
-          </div>
-          <div class="monitor-neck"></div>
-          <div class="monitor-foot"></div>
+      <a class="hero-product" href="https://www.asus.com/uk/motherboards-components/cases/asus/asus-a31-plus-case/" target="_blank" rel="noreferrer">
+        <div class="hero-product-bg"></div>
+        <img
+          src="https://dlcdnwebimgs.asus.com/files/media/fa00bc94-c735-4405-b57b-3ff92217597b/v1/img/asus-a31-plus-boundless.png"
+          alt="ASUS A31 Plus"
+          fetchpriority="high">
+        <div class="hero-caption">
+          <span>PC CASE</span>
+          <strong>ASUS A31 Plus</strong>
+          <small>основа будущей сборки</small>
         </div>
-
-        <div class="pc-case">
-          <div class="case-glass">
-            <div class="fan fan-a"></div>
-            <div class="fan fan-b"></div>
-            <div class="gpu-line"></div>
-          </div>
-          <span class="case-label">AM5</span>
-        </div>
-
-        <div class="keyboard-art"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-        <div class="mouse-art"></div>
-        <div class="desk-line"></div>
-
-        <div class="visual-note note-monitor">HP OMEN 25i</div>
-        <div class="visual-note note-pc">Ryzen 7 7700X</div>
-      </div>
-    </section>
-
-    <section class="quick shell">
-      <div><strong>165 Hz</strong><span>основной монитор</span></div>
-      <div><strong>AM5</strong><span>платформа</span></div>
-      <div><strong>1080p</strong><span>основное разрешение</span></div>
-      <div><strong>Ethernet</strong><span>основная сеть</span></div>
+      </a>
     </section>
 
     <section class="section shell" id="pc">
@@ -87,27 +61,44 @@
         </div>
       </div>
 
-      <div class="pc-layout">
-        <article class="pc-showcase">
-          <div class="pc-showcase-copy">
-            <span class="soft-label">CURRENT BUILD</span>
-            <h3>Сборка под высокий FPS в Aion и комфортные 1080p в тяжёлых играх.</h3>
-            <p>
-              Основа — Ryzen 7 7700X и B650. Видеокарта и память здесь не «навсегда»:
-              их можно спокойно обновить позже, не меняя весь компьютер.
-            </p>
-          </div>
-          <div class="tower-illustration">
-            <div class="tower-window">
-              <div class="tower-fan one"></div>
-              <div class="tower-fan two"></div>
-              <div class="tower-fan three"></div>
-              <div class="tower-gpu"></div>
+      <div class="pc-editorial">
+        <div class="pc-featured">
+          <a class="product-shot gpu-shot" href="https://oc.asrock.com/Graphics-Card/AMD/Radeon%20RX%206600%20Challenger%20D%208GB/" target="_blank" rel="noreferrer">
+            <div class="product-image-wrap">
+              <img
+                src="https://oc.asrock.com/Graphics-Card/photo/Radeon%20RX%206600%20Challenger%20D%208GB%28M1%29.png"
+                alt="ASRock Radeon RX 6600 Challenger D 8GB"
+                loading="lazy">
             </div>
-          </div>
-        </article>
+            <div class="product-copy">
+              <span>GPU</span>
+              <h3>ASRock Radeon RX 6600 Challenger D</h3>
+              <p>8 ГБ GDDR6 · текущий вариант под 1080p</p>
+            </div>
+          </a>
 
-        <div id="pc-list" class="spec-list"></div>
+          <a class="product-shot cooler-shot" href="https://www.thermalright.com/product/peerless-assassin-120-vision-max-argb-black/" target="_blank" rel="noreferrer">
+            <div class="product-image-wrap">
+              <img
+                src="https://www.thermalright.com/wp-content/uploads/2026/08/peerless-assassin-120-vision-max-argb-black.png"
+                alt="Thermalright Peerless Assassin 120 Vision MAX ARGB Black"
+                loading="lazy">
+            </div>
+            <div class="product-copy">
+              <span>COOLER</span>
+              <h3>Peerless Assassin 120 Vision MAX</h3>
+              <p>двухбашенный кулер · дисплей · ARGB</p>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <div class="pc-intro">
+            <span class="soft-label">CURRENT BUILD</span>
+            <h3>Сильная AM5-база, а дорогие апгрейды — только когда они реально понадобятся.</h3>
+          </div>
+          <div id="pc-list" class="spec-list"></div>
+        </div>
       </div>
     </section>
 
@@ -120,7 +111,7 @@
         </div>
       </div>
 
-      <div id="gear-grid" class="gear-grid"></div>
+      <div id="gear-grid" class="gear-editorial"></div>
     </section>
 
     <section class="section shell" id="desk">
@@ -132,47 +123,39 @@
         </div>
       </div>
 
-      <div class="desk-layout">
-        <article class="desk-card big">
-          <span class="soft-label">MONITOR</span>
-          <h3>HP OMEN 25i</h3>
-          <p>1920×1080 · 165 Гц</p>
-          <div class="desk-monitor">
-            <div class="mini-screen"><span>165</span><small>Hz</small></div>
-            <div class="mini-neck"></div>
-          </div>
-        </article>
-
-        <article class="desk-card">
-          <span class="soft-label">CHAIR</span>
+      <div class="desk-simple">
+        <article>
+          <span>CHAIR</span>
           <h3>YEELER</h3>
-          <p>Точную модель добавлю позже.</p>
-          <div class="chair-art"><i></i><b></b></div>
+          <p>Точную модель и фото добавлю, когда зафиксируем конкретную версию.</p>
         </article>
-
-        <article class="desk-card">
-          <span class="soft-label">DESKMAT</span>
+        <article>
+          <span>DESKMAT</span>
           <h3>Deskmat</h3>
-          <p>Тканевый коврик · модель уточню.</p>
-          <div class="mat-art"></div>
+          <p>Здесь лучше будет смотреться твоё реальное фото, а не случайная картинка товара.</p>
+        </article>
+        <article>
+          <span>DESK</span>
+          <h3>Стол</h3>
+          <p>Добавим размеры, модель и фото всего рабочего места.</p>
         </article>
       </div>
     </section>
 
-    <section class="section shell" id="details">
+    <section class="section shell details-section" id="details">
       <div class="section-title">
         <span>04</span>
         <div>
           <p>DETAILS</p>
-          <h2>Подключения и софт</h2>
+          <h2>Если хочется подробнее</h2>
         </div>
       </div>
 
       <div class="details-grid">
         <details open>
           <summary>
-            <span>Подключения</span>
-            <small>что куда подключено</small>
+            <span>Что куда подключено</span>
+            <small>кабели и порты</small>
           </summary>
           <div id="connections-list" class="connections"></div>
         </details>
@@ -180,13 +163,13 @@
         <details>
           <summary>
             <span>Сеть и программы</span>
-            <small>то, что обычно остаётся за кадром</small>
+            <small>Ethernet, ExitLag, Synapse, G HUB</small>
           </summary>
           <div class="detail-columns">
             <div>
               <h4>Сеть</h4>
               <p><b>Ethernet</b> · 100 Мбит/с</p>
-              <p><b>ExitLag</b> · EuroAion</p>
+              <p><b>ExitLag</b> · для EuroAion</p>
               <p><b>2.5G LAN</b> · на материнской плате</p>
             </div>
             <div>
@@ -200,8 +183,8 @@
 
         <details>
           <summary>
-            <span>Что хочу обновить</span>
-            <small>без апгрейда ради апгрейда</small>
+            <span>Будущие апгрейды</span>
+            <small>только по необходимости</small>
           </summary>
           <div id="upgrade-list" class="upgrade-list"></div>
         </details>
