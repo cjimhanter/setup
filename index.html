@@ -3,232 +3,215 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090d14">
-  <meta name="description" content="Мой игровой и рабочий сетап: ПК, монитор, периферия, подключения и планы по апгрейду.">
-  <title>Мой сетап — cjimhanter</title>
+  <meta name="theme-color" content="#fff7fb">
+  <meta name="description" content="Мой игровой и рабочий сетап — ПК, монитор, периферия и подключения.">
+  <title>My Setup — cjimhanter</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="hero" id="top">
-    <div class="shell">
-      <nav class="nav">
-        <a class="brand" href="#top">cjimhanter <span>/ setup</span></a>
-        <div class="nav-links">
-          <a href="#pc">ПК</a>
-          <a href="#peripherals">Периферия</a>
-          <a href="#connections">Подключения</a>
-          <a href="#upgrades">Апгрейды</a>
-        </div>
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="#top">cjimhanter<span>.setup</span></a>
+      <nav class="nav-links">
+        <a href="#pc">PC</a>
+        <a href="#gear">Gear</a>
+        <a href="#desk">Desk</a>
+        <a href="#details">Details</a>
       </nav>
-
-      <div class="hero-grid">
-        <div>
-          <p class="eyebrow">МОЙ СЕТАП</p>
-          <h1>Всё, на чём я играю<br>и работаю.</h1>
-          <p class="lead">
-            Если ты пришёл сюда со стрима — здесь собраны все актуальные комплектующие,
-            периферия и подключения. Страница обновляется вместе с сетапом.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button primary" href="#pc">Посмотреть ПК</a>
-            <a class="button ghost" href="#peripherals">Периферия</a>
-          </div>
-
-          <div class="chips">
-            <span>1080p</span>
-            <span>165 Гц</span>
-            <span>AM5</span>
-            <span>EuroAion 4.6</span>
-            <span>Baldur’s Gate 3</span>
-          </div>
-        </div>
-
-        <aside class="summary-card">
-          <p class="card-kicker">КОРОТКО</p>
-          <div class="summary-row">
-            <span>Главная цель</span>
-            <strong>раскрывать 165 Гц в Aion</strong>
-          </div>
-          <div class="summary-row">
-            <span>Тяжёлые игры</span>
-            <strong>комфортные 1080p</strong>
-          </div>
-          <div class="summary-row">
-            <span>Основа</span>
-            <strong>Ryzen 7 7700X + B650</strong>
-          </div>
-          <div class="summary-row">
-            <span>Сейчас</span>
-            <strong class="status in-progress">сборка в процессе</strong>
-          </div>
-        </aside>
-      </div>
     </div>
   </header>
 
-  <main class="shell">
-    <section class="intro-strip">
-      <div>
-        <span class="intro-number">165</span>
-        <span class="intro-label">Гц у основного монитора</span>
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <span class="pill">MY SETUP</span>
+        <h1>То, на чём я<br><em>играю и работаю.</em></h1>
+        <p class="hero-text">
+          Актуальный сетап со стрима: ПК, монитор, мышь, клавиатура,
+          наушники и всё остальное — в одном месте.
+        </p>
+        <div class="hero-meta">
+          <span>1080p</span>
+          <i></i>
+          <span>165 Hz</span>
+          <i></i>
+          <span>EuroAion 4.6</span>
+        </div>
       </div>
-      <div>
-        <span class="intro-number">1080p</span>
-        <span class="intro-label">основное разрешение</span>
-      </div>
-      <div>
-        <span class="intro-number">AM5</span>
-        <span class="intro-label">платформа с запасом на апгрейд</span>
+
+      <div class="setup-visual" aria-label="Pink desk setup illustration">
+        <div class="visual-glow glow-one"></div>
+        <div class="visual-glow glow-two"></div>
+
+        <div class="monitor">
+          <div class="monitor-screen">
+            <div class="screen-orb orb-a"></div>
+            <div class="screen-orb orb-b"></div>
+            <span>165 Hz</span>
+          </div>
+          <div class="monitor-neck"></div>
+          <div class="monitor-foot"></div>
+        </div>
+
+        <div class="pc-case">
+          <div class="case-glass">
+            <div class="fan fan-a"></div>
+            <div class="fan fan-b"></div>
+            <div class="gpu-line"></div>
+          </div>
+          <span class="case-label">AM5</span>
+        </div>
+
+        <div class="keyboard-art"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="mouse-art"></div>
+        <div class="desk-line"></div>
+
+        <div class="visual-note note-monitor">HP OMEN 25i</div>
+        <div class="visual-note note-pc">Ryzen 7 7700X</div>
       </div>
     </section>
 
-    <section class="section" id="pc">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">ПК</p>
-          <h2>Что внутри</h2>
-        </div>
-        <p>
-          Сборка ориентирована не на максимальные цифры в бенчмарках, а на мои реальные задачи:
-          высокий FPS в Aion и комфортную игру в более тяжёлые проекты.
-        </p>
-      </div>
-
-      <div id="pc-grid" class="cards"></div>
-
-      <div class="story-card">
-        <div>
-          <p class="eyebrow">ПОЧЕМУ ТАК</p>
-          <h3>Сильная база сейчас, дорогие апгрейды — потом.</h3>
-        </div>
-        <p>
-          Ryzen 7 7700X, B650, хороший блок питания и просторный корпус — это основа,
-          которую не хочется менять через год. Видеокарту и память можно обновить позже,
-          когда в этом появится реальный смысл.
-        </p>
-      </div>
+    <section class="quick shell">
+      <div><strong>165 Hz</strong><span>основной монитор</span></div>
+      <div><strong>AM5</strong><span>платформа</span></div>
+      <div><strong>1080p</strong><span>основное разрешение</span></div>
+      <div><strong>Ethernet</strong><span>основная сеть</span></div>
     </section>
 
-    <section class="section" id="peripherals">
-      <div class="section-head">
+    <section class="section shell" id="pc">
+      <div class="section-title">
+        <span>01</span>
         <div>
-          <p class="eyebrow">ПЕРИФЕРИЯ</p>
-          <h2>Чем пользуюсь каждый день</h2>
+          <p>PC BUILD</p>
+          <h2>Компьютер</h2>
         </div>
-        <p>
-          Монитор, клавиатура, мышь, звук и всё остальное, что напрямую влияет на ощущения
-          от игры и работы.
-        </p>
-      </div>
-      <div id="peripheral-grid" class="cards"></div>
-    </section>
-
-    <section class="section" id="connections">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">ПОДКЛЮЧЕНИЯ</p>
-          <h2>Что куда подключено</h2>
-        </div>
-        <p>
-          Этот раздел пригодится и мне самому: после переезда или разборки ПК можно быстро
-          восстановить всё как было.
-        </p>
       </div>
 
-      <div class="connection-layout">
-        <div id="connections-list" class="connection-list"></div>
-
-        <aside class="ports">
-          <p class="card-kicker">ПОРТЫ ПК</p>
-          <h3>MSI B650 Gaming Plus WiFi</h3>
-          <ul>
-            <li>4× USB-A 5 Гбит/с</li>
-            <li>3× USB-A 10 Гбит/с</li>
-            <li>1× USB-C 20 Гбит/с</li>
-            <li>2.5G Ethernet</li>
-            <li>HDMI / DisplayPort</li>
-            <li>аудиоразъёмы</li>
-          </ul>
-
-          <h3 class="ports-subtitle">ASUS A31 Plus</h3>
-          <ul>
-            <li>2× USB-A 5 Гбит/с спереди</li>
-            <li>1× USB-C 20 Гбит/с спереди</li>
-            <li>комбинированный разъём гарнитуры</li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">СЕТЬ И СОФТ</p>
-          <h2>То, что остаётся за кадром</h2>
-        </div>
-        <p>
-          Интернет, программы для периферии и игровой софт — без них железо само по себе
-          рассказывает только половину истории.
-        </p>
-      </div>
-
-      <div class="two-col">
-        <article class="panel">
-          <p class="card-kicker">СЕТЬ</p>
-          <h3>Подключение</h3>
-          <dl>
-            <div><dt>ПК</dt><dd>Ethernet</dd></div>
-            <div><dt>Скорость</dt><dd>100 Мбит/с</dd></div>
-            <div><dt>Для EuroAion</dt><dd>ExitLag</dd></div>
-            <div><dt>На плате</dt><dd>2.5G LAN / Wi‑Fi / Bluetooth</dd></div>
-          </dl>
+      <div class="pc-layout">
+        <article class="pc-showcase">
+          <div class="pc-showcase-copy">
+            <span class="soft-label">CURRENT BUILD</span>
+            <h3>Сборка под высокий FPS в Aion и комфортные 1080p в тяжёлых играх.</h3>
+            <p>
+              Основа — Ryzen 7 7700X и B650. Видеокарта и память здесь не «навсегда»:
+              их можно спокойно обновить позже, не меняя весь компьютер.
+            </p>
+          </div>
+          <div class="tower-illustration">
+            <div class="tower-window">
+              <div class="tower-fan one"></div>
+              <div class="tower-fan two"></div>
+              <div class="tower-fan three"></div>
+              <div class="tower-gpu"></div>
+            </div>
+          </div>
         </article>
 
-        <article class="panel">
-          <p class="card-kicker">СОФТ</p>
-          <h3>Что использую</h3>
-          <dl>
-            <div><dt>Клавиатура</dt><dd>Razer Synapse 3</dd></div>
-            <div><dt>Мышь</dt><dd>Logitech G HUB</dd></div>
-            <div><dt>EuroAion</dt><dd>Shygo / custom config / UI</dd></div>
-            <div><dt>Маршрут</dt><dd>ExitLag</dd></div>
-          </dl>
+        <div id="pc-list" class="spec-list"></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="gear">
+      <div class="section-title">
+        <span>02</span>
+        <div>
+          <p>GEAR</p>
+          <h2>Периферия</h2>
+        </div>
+      </div>
+
+      <div id="gear-grid" class="gear-grid"></div>
+    </section>
+
+    <section class="section shell" id="desk">
+      <div class="section-title">
+        <span>03</span>
+        <div>
+          <p>DESK</p>
+          <h2>Рабочее место</h2>
+        </div>
+      </div>
+
+      <div class="desk-layout">
+        <article class="desk-card big">
+          <span class="soft-label">MONITOR</span>
+          <h3>HP OMEN 25i</h3>
+          <p>1920×1080 · 165 Гц</p>
+          <div class="desk-monitor">
+            <div class="mini-screen"><span>165</span><small>Hz</small></div>
+            <div class="mini-neck"></div>
+          </div>
+        </article>
+
+        <article class="desk-card">
+          <span class="soft-label">CHAIR</span>
+          <h3>YEELER</h3>
+          <p>Точную модель добавлю позже.</p>
+          <div class="chair-art"><i></i><b></b></div>
+        </article>
+
+        <article class="desk-card">
+          <span class="soft-label">DESKMAT</span>
+          <h3>Deskmat</h3>
+          <p>Тканевый коврик · модель уточню.</p>
+          <div class="mat-art"></div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="upgrades">
-      <div class="section-head">
+    <section class="section shell" id="details">
+      <div class="section-title">
+        <span>04</span>
         <div>
-          <p class="eyebrow">ДАЛЬШЕ</p>
-          <h2>Что хочу улучшить</h2>
+          <p>DETAILS</p>
+          <h2>Подключения и софт</h2>
         </div>
-        <p>
-          Здесь не список «купить всё самое дорогое», а реальные следующие шаги,
-          когда текущего железа начнёт не хватать.
-        </p>
       </div>
-      <div id="upgrade-list" class="roadmap"></div>
-    </section>
 
-    <section class="section compact">
-      <div class="panel privacy">
-        <div>
-          <p class="card-kicker">О СТРАНИЦЕ</p>
-          <h3>Актуальность</h3>
-        </div>
-        <p>
-          Я обновляю эту страницу по мере покупок и замен. Серийники, чеки, IP-адреса
-          и другая приватная информация сюда не попадают.
-        </p>
+      <div class="details-grid">
+        <details open>
+          <summary>
+            <span>Подключения</span>
+            <small>что куда подключено</small>
+          </summary>
+          <div id="connections-list" class="connections"></div>
+        </details>
+
+        <details>
+          <summary>
+            <span>Сеть и программы</span>
+            <small>то, что обычно остаётся за кадром</small>
+          </summary>
+          <div class="detail-columns">
+            <div>
+              <h4>Сеть</h4>
+              <p><b>Ethernet</b> · 100 Мбит/с</p>
+              <p><b>ExitLag</b> · EuroAion</p>
+              <p><b>2.5G LAN</b> · на материнской плате</p>
+            </div>
+            <div>
+              <h4>Софт</h4>
+              <p><b>Razer Synapse 3</b> · клавиатура</p>
+              <p><b>Logitech G HUB</b> · мышь</p>
+              <p><b>Shygo / custom UI</b> · Aion</p>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            <span>Что хочу обновить</span>
+            <small>без апгрейда ради апгрейда</small>
+          </summary>
+          <div id="upgrade-list" class="upgrade-list"></div>
+        </details>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="shell footer-inner">
-      <span>cjimhanter / setup</span>
+      <span>cjimhanter.setup</span>
       <span id="updated"></span>
     </div>
   </footer>
