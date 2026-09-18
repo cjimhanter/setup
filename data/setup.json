@@ -33,17 +33,16 @@
   "case": {
     "name": "ASUS A31 Plus",
     "image": "./assets/case.png",
-    "url": "https://www.asus.com/uk/motherboards-components/cases/asus/asus-a31-plus-case/",
-    "status": "unconfirmed"
+    "url": "https://www.asus.com/uk/motherboards-components/cases/asus/asus-a31-plus-case/"
   },
   "pc": [
-    { "category": "CPU", "name": "AMD Ryzen 7 7700X", "meta": "8 cores / 16 threads", "status": "owned" },
-    { "category": "GPU", "name": "ASRock Radeon RX 6600 Challenger D 8GB", "meta": "8 GB GDDR6", "status": "planned" },
-    { "category": "Motherboard", "name": "MSI B650 Gaming Plus WiFi", "meta": "ATX · B650 · Wi-Fi", "status": "owned" },
-    { "category": "Memory", "name": "Kingston FURY Beast", "meta": "16 GB · 2 × 8 GB · DDR5-5200 CL40", "status": "planned" },
-    { "category": "Storage", "name": "Samsung 980 500 GB NVMe", "meta": "System SSD", "status": "owned" },
-    { "category": "Power supply", "name": "FSP Hydro GT Pro 1000W Gold", "meta": "1000 W · 80 PLUS Gold", "status": "owned" },
-    { "category": "CPU cooler", "name": "Thermalright Peerless Assassin 120 Vision MAX", "meta": "Dual tower · ARGB", "status": "planned" }
+    { "category": "CPU", "name": "AMD Ryzen 7 7700X", "meta": "8 cores / 16 threads" },
+    { "category": "GPU", "name": "ASRock Radeon RX 6600 Challenger D 8GB", "meta": "8 GB GDDR6" },
+    { "category": "Motherboard", "name": "MSI B650 Gaming Plus WiFi", "meta": "ATX · B650 · Wi-Fi" },
+    { "category": "Memory", "name": "Kingston FURY Beast", "meta": "16 GB · 2 × 8 GB · DDR5-5200 CL40" },
+    { "category": "Storage", "name": "Samsung 980 500 GB NVMe", "meta": "System SSD" },
+    { "category": "Power supply", "name": "FSP Hydro GT Pro 1000W Gold", "meta": "1000 W · 80 PLUS Gold" },
+    { "category": "CPU cooler", "name": "Thermalright Peerless Assassin 120 Vision MAX", "meta": "Dual tower · ARGB" }
   ],
   "connections": [
     { "device": "HP OMEN 25i", "detail": "Main monitor", "target": "Graphics card", "port": "Port to be confirmed after assembly" },
