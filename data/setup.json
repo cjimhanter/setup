@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18",
+  "updated": "2026-10-07",
   "gear": [
     {
       "category": "Monitor",
@@ -37,7 +37,7 @@
   },
   "pc": [
     { "category": "CPU", "name": "AMD Ryzen 7 7700X", "meta": "8 cores / 16 threads" },
-    { "category": "GPU", "name": "ASRock Radeon RX 6600 Challenger D 8GB", "meta": "8 GB GDDR6" },
+    { "category": "GPU", "name": "Gigabyte Radeon RX 6600 XT Gaming OC Pro 8G", "meta": "8 GB GDDR6 · RDNA 2 · PCIe 4.0" },
     { "category": "Motherboard", "name": "MSI B650 Gaming Plus WiFi", "meta": "ATX · B650 · Wi-Fi" },
     { "category": "Memory", "name": "Kingston FURY Beast", "meta": "16 GB · 2 × 8 GB · DDR5-5200 CL40" },
     { "category": "Storage", "name": "Samsung 980 500 GB NVMe", "meta": "System SSD" },
@@ -54,6 +54,6 @@
   "upgrades": [
     { "name": "1-2 TB SSD", "why": "When 500 GB is no longer enough for games and everyday files." },
     { "name": "32 GB DDR5-6000", "why": "When DDR5 pricing makes the upgrade worthwhile." },
-    { "name": "A more powerful GPU", "why": "When the RX 6600 no longer meets my needs at 1080p." }
+    { "name": "A more powerful GPU", "why": "When the RX 6600 XT no longer meets my needs at 1080p." }
   ]
 }
