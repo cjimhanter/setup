@@ -201,3 +201,13 @@ for (const colorScheme of ['light', 'dark']) {
     expect(results.violations).toEqual([]);
   });
 }
+
+for (const [width, columns] of [[820, 4], [768, 4], [600, 2], [390, 2]]) {
+  test(`gear grid shows ${columns} columns at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto('/');
+    await expect(page.locator('.gear-card')).toHaveCount(4);
+    const tops = await page.locator('.gear-card').evaluateAll(cards => cards.map(card => Math.round(card.getBoundingClientRect().top)));
+    expect(new Set(tops).size).toBe(4 / columns);
+  });
+}

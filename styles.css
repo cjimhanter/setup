@@ -159,8 +159,11 @@ h2 { margin: 0; font-size: clamp(30px, 3.2vw, 40px); font-weight: 680; letter-sp
 @media (max-width: 1000px) {
   .hero { gap: 36px; }
   .setup-note { padding-inline: 24px; }
-  .gear-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gear-media { height: 230px; padding: 28px; }
+  .gear-grid { gap: 12px; }
+  .gear-media { height: 150px; padding: 16px; }
+  .gear-body { padding: 14px 14px 16px; }
+  .gear-body h3 { font-size: 15px; }
+  .gear-body p { margin-bottom: 14px; font-size: 12px; }
   .pc-card { grid-template-columns: 30% minmax(0, 1fr); }
   .case-link { padding: 20px; }
   .case-heading { flex-wrap: wrap; gap: 8px; }
@@ -188,6 +191,9 @@ h2 { margin: 0; font-size: clamp(30px, 3.2vw, 40px); font-weight: 680; letter-sp
   .note-copy { margin-block: 16px; }
   .section { padding-block: 36px 8px; }
   .heading { display: block; margin-bottom: 20px; }
+  .gear-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gear-media { height: 190px; }
+  .gear-body h3 { font-size: 16px; }
   .section-description { margin-top: 12px; text-align: left; }
   .section-description br { display: none; }
   .pc-card { grid-template-columns: 1fr; }
@@ -214,11 +220,7 @@ h2 { margin: 0; font-size: clamp(30px, 3.2vw, 40px); font-weight: 680; letter-sp
 }
 
 @media (max-width: 450px) {
-  .gear-grid { gap: 12px; }
-  .gear-media { height: 150px; padding: 16px; }
-  .gear-body { padding: 14px 14px 16px; }
-  .gear-body h3 { font-size: 16px; }
-  .gear-body p { margin-bottom: 14px; font-size: 12px; }
+  .gear-media { height: 150px; }
   .playing > :first-child { flex-basis: 100%; }
   .nav nav { gap: 14px; }
 }
