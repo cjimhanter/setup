@@ -1,65 +1,36 @@
 :root {
-  color-scheme: light;
-  --bg: #fff9fc;
-  --card: #fff;
-  --ink: #34252e;
-  --muted: #806d77;
-  --line: #f0d9e4;
-  --line-soft: #f4e5ec;
-  --accent: #b33c73;
-  --pink: #d45d92;
-  --soft: #fff0f6;
-  --topbar: rgb(255 249 252 / 96%);
-  --selection: #f7cce0;
+  color-scheme: light dark;
+  --bg: light-dark(#fff9fc, #151015);
+  --card: light-dark(#fff, #1e171d);
+  --ink: light-dark(#34252e, #f6eaf0);
+  --muted: light-dark(#806d77, #b9a5b0);
+  --line: light-dark(#f0d9e4, #36272f);
+  --line-soft: light-dark(#f4e5ec, #2c2128);
+  --accent: light-dark(#b33c73, #f08cba);
+  --pink: light-dark(#d45d92, #f4a3c7);
+  --soft: light-dark(#fff0f6, #261b22);
+  --topbar: light-dark(rgb(255 249 252 / 96%), rgb(21 16 21 / 92%));
+  --selection: light-dark(#f7cce0, #6e2f4d);
   --button-bg: var(--ink);
-  --button-fg: #fff;
+  --button-fg: light-dark(#fff, #151015);
   --button-hover: var(--accent);
-  --chip-ink: #6b5360;
-  --note-border: #f0cfdf;
-  --note-glow: #ffd9e9;
-  --note-ink: #705462;
-  --hover-border: #e3aac4;
-  --shadow: rgb(141 66 101 / 8%);
-  --media-from: #fff;
-  --media-to: #fff4f8;
-  --case-to: #fff7fa;
-  --media-glow: transparent;
-  --icon-border: #efcddd;
-  --notice-border: #e1b8ca;
+  --chip-ink: light-dark(#6b5360, #d4c0ca);
+  --note-border: light-dark(#f0cfdf, #46303c);
+  --note-glow: light-dark(#ffd9e9, #4a2236);
+  --note-ink: light-dark(#705462, #cdb6c2);
+  --hover-border: light-dark(#e3aac4, #7a3c5a);
+  --shadow: light-dark(rgb(141 66 101 / 8%), rgb(0 0 0 / 35%));
+  --media-from: light-dark(#fff, #241b22);
+  --media-to: light-dark(#fff4f8, #2b1f27);
+  --case-to: light-dark(#fff7fa, #1e171d);
+  --media-glow: light-dark(transparent, rgb(255 214 233 / 13%));
+  --icon-border: light-dark(#efcddd, #4d3442);
+  --notice-border: light-dark(#e1b8ca, #5c3a4b);
   --radius: 18px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #151015;
-    --card: #1e171d;
-    --ink: #f6eaf0;
-    --muted: #b9a5b0;
-    --line: #36272f;
-    --line-soft: #2c2128;
-    --accent: #f08cba;
-    --pink: #f4a3c7;
-    --soft: #261b22;
-    --topbar: rgb(21 16 21 / 92%);
-    --selection: #6e2f4d;
-    --button-bg: var(--ink);
-    --button-fg: #151015;
-    --button-hover: var(--accent);
-    --chip-ink: #d4c0ca;
-    --note-border: #46303c;
-    --note-glow: #4a2236;
-    --note-ink: #cdb6c2;
-    --hover-border: #7a3c5a;
-    --shadow: rgb(0 0 0 / 35%);
-    --media-from: #241b22;
-    --media-to: #2b1f27;
-    --case-to: #1e171d;
-    --media-glow: rgb(255 214 233 / 13%);
-    --icon-border: #4d3442;
-    --notice-border: #5c3a4b;
-  }
-}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 96px; }
@@ -80,7 +51,12 @@ main:focus { outline: none; }
 .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .brand { white-space: nowrap; font-size: 19px; font-weight: 800; letter-spacing: -.7px; }
 .brand-label { font-size: 14px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.nav-end { display: flex; align-items: center; gap: 22px; }
 .nav nav { display: flex; gap: 26px; }
+.theme-toggle { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--card); color: var(--muted); cursor: pointer; transition: color .18s, border-color .18s; }
+.theme-toggle:hover { color: var(--accent); border-color: var(--hover-border); }
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle[data-next="light"] .icon-moon, .theme-toggle[data-next="dark"] .icon-sun { display: none; }
 .nav nav a { display: flex; align-items: center; min-height: 44px; font-size: 13px; font-weight: 650; color: var(--muted); }
 .nav nav a:hover, .back-top:hover { color: var(--accent); }
 
@@ -204,6 +180,7 @@ h2 { margin: 0; font-size: clamp(30px, 3.2vw, 40px); font-weight: 680; letter-sp
   .nav { min-height: 72px; gap: 12px; }
   .brand { font-size: 16px; }
   .nav .brand-label { display: none; }
+  .nav-end { gap: 14px; }
   .nav nav { gap: 18px; }
   .nav nav a { font-size: 12px; }
   .hero { grid-template-columns: 1fr; gap: 32px; padding-block: 42px 24px; }

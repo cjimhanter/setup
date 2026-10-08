@@ -197,5 +197,40 @@ async function loadSetup() {
   }
 }
 
+const themeToggle = document.getElementById('theme-toggle');
+const systemDark = matchMedia('(prefers-color-scheme: dark)');
+const themeColors = { light: '#fff9fc', dark: '#151015' };
+
+function systemTheme() {
+  return systemDark.matches ? 'dark' : 'light';
+}
+
+function renderTheme() {
+  const theme = document.documentElement.dataset.theme || systemTheme();
+  const next = theme === 'dark' ? 'light' : 'dark';
+  themeToggle.dataset.next = next;
+  themeToggle.setAttribute('aria-label', `Switch to ${next} theme`);
+  for (const meta of document.querySelectorAll('meta[name="theme-color"]')) {
+    meta.content = themeColors[document.documentElement.dataset.theme || (meta.media.includes('dark') ? 'dark' : 'light')];
+  }
+}
+
+function setTheme(theme) {
+  // Choosing the theme the system already uses goes back to following the system.
+  const followSystem = theme === systemTheme();
+  if (followSystem) delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = theme;
+  try {
+    if (followSystem) localStorage.removeItem('theme');
+    else localStorage.setItem('theme', theme);
+  } catch {}
+  renderTheme();
+}
+
+themeToggle.addEventListener('click', () => setTheme(themeToggle.dataset.next));
+systemDark.addEventListener('change', renderTheme);
+renderTheme();
+themeToggle.hidden = false;
+
 retry.addEventListener('click', loadSetup);
 loadSetup();

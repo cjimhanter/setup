@@ -150,7 +150,44 @@ test('native software details and data link are available without JavaScript', a
   await expect(page.getByRole('link', { name: 'read the setup data' })).toBeVisible();
   await page.locator('summary').nth(1).click();
   await expect(page.getByText(/100 Mbps Ethernet/)).toBeVisible();
+  await expect(page.locator('#theme-toggle')).toBeHidden();
   await context.close();
+});
+
+const lightBackground = 'rgb(255, 249, 252)';
+const darkBackground = 'rgb(21, 16, 21)';
+
+test('theme toggle switches themes, remembers the choice and can return to the system theme', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'light' });
+  await page.goto('/');
+  const toggle = page.getByRole('button', { name: 'Switch to dark theme' });
+  await expect(page.locator('body')).toHaveCSS('background-color', lightBackground);
+
+  await toggle.click();
+  await expect(page.locator('body')).toHaveCSS('background-color', darkBackground);
+  await expect(page.locator('meta[name="theme-color"]').first()).toHaveAttribute('content', '#151015');
+  await expect(page.getByRole('button', { name: 'Switch to light theme' })).toBeFocused();
+
+  await page.reload();
+  await expect(page.locator('body')).toHaveCSS('background-color', darkBackground);
+
+  await page.getByRole('button', { name: 'Switch to light theme' }).click();
+  await expect(page.locator('html')).not.toHaveAttribute('data-theme');
+  expect(await page.evaluate(() => localStorage.getItem('theme'))).toBeNull();
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await expect(page.locator('body')).toHaveCSS('background-color', darkBackground);
+  await expect(page.getByRole('button', { name: 'Switch to light theme' })).toBeVisible();
+});
+
+test('a forced light theme overrides a dark system theme', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Switch to light theme' }).click();
+  await expect(page.locator('body')).toHaveCSS('background-color', lightBackground);
+  await expect(page.locator('meta[name="theme-color"]').last()).toHaveAttribute('content', '#fff9fc');
+  await page.reload();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'light');
+  await expect(page.locator('body')).toHaveCSS('background-color', lightBackground);
 });
 
 for (const colorScheme of ['light', 'dark']) {
@@ -158,7 +195,7 @@ for (const colorScheme of ['light', 'dark']) {
     await page.emulateMedia({ colorScheme });
     await page.goto('/');
     await expect(page.locator('.gear-card')).toHaveCount(4);
-    await expect(page.locator('body')).toHaveCSS('background-color', colorScheme === 'dark' ? 'rgb(21, 16, 21)' : 'rgb(255, 249, 252)');
+    await expect(page.locator('body')).toHaveCSS('background-color', colorScheme === 'dark' ? darkBackground : lightBackground);
     for (const summary of await page.locator('summary').all()) await summary.click();
     const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
     expect(results.violations).toEqual([]);

@@ -36,7 +36,7 @@ The page is meant to work as a link someone can open from a stream and understan
 
 - real product images first;
 - short names and useful specs;
-- a pink visual identity in light and dark themes, following the system setting;
+- a pink visual identity in light and dark themes: it follows the system setting until a visitor picks one with the header toggle, and that choice is remembered;
 - PC components without purchase-status badges;
 - technical details kept lower on the page;
 - no serial numbers, receipt numbers, IP addresses, credentials, or other private information.
@@ -58,7 +58,7 @@ npm test
 npm run build
 ```
 
-Playwright exercises the site on desktop and mobile viewports. Tests cover local image loading, navigation, keyboard interaction, loading failures and retry recovery, safe rendering, no-JavaScript fallback, and WCAG A/AA checks.
+Playwright exercises the site on desktop and mobile viewports. Tests cover local image loading, navigation, keyboard interaction, loading failures and retry recovery, safe rendering, no-JavaScript fallback, the theme toggle, and WCAG A/AA checks in both themes.
 
 ## GitHub Pages
 
