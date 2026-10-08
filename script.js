@@ -82,7 +82,8 @@ function connectionRow(item) {
   const device = element('div');
   device.append(element('strong', '', item.device), element('small', '', item.detail));
   const target = element('div');
-  target.append(element('strong', '', item.target), element('small', '', item.port));
+  target.append(element('strong', '', item.target));
+  if (item.port) target.append(element('small', '', item.port));
   const arrow = element('span', 'connection-arrow', '→');
   arrow.setAttribute('aria-label', 'connects to');
   row.append(device, arrow, target);
@@ -122,13 +123,16 @@ function validateData(data) {
   for (const [key, fields] of Object.entries({
     gear: ['category', 'name', 'meta', 'image', 'url'],
     pc: ['category', 'name', 'meta'],
-    connections: ['device', 'detail', 'target', 'port'],
+    connections: ['device', 'detail', 'target'],
     upgrades: ['name', 'why']
   })) {
     if (!Array.isArray(data[key]) || !data[key].length) throw new Error(`Missing ${key}`);
     data[key].forEach(item => requireFields(item, fields));
   }
 
+  data.connections.forEach(item => {
+    if ('port' in item) requireFields(item, ['port']);
+  });
   data.gear.forEach(validateProduct);
   validateProduct(data.case);
   return date;

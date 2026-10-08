@@ -25,7 +25,7 @@
     {
       "category": "Headset",
       "name": "Logitech G325 LIGHTSPEED",
-      "meta": "White · LIGHTSPEED · Bluetooth · 212 g",
+      "meta": "White · LIGHTSPEED · Bluetooth · 212\u00a0g",
       "image": "./assets/headset.jpg",
       "url": "https://www.logitechg.com/en-gb/shop/p/g325-lightspeed-headset"
     }
@@ -45,15 +45,15 @@
     { "category": "CPU cooler", "name": "Thermalright Peerless Assassin 120 Vision MAX", "meta": "Dual tower · ARGB" }
   ],
   "connections": [
-    { "device": "HP OMEN 25i", "detail": "Main monitor", "target": "Graphics card", "port": "Port to be confirmed after assembly" },
-    { "device": "Razer BlackWidow V4", "detail": "Keyboard", "target": "Rear USB-A", "port": "Exact port to be confirmed" },
-    { "device": "Logitech G502 X LIGHTSPEED", "detail": "White wireless mouse", "target": "LIGHTSPEED USB receiver", "port": "Exact port to be confirmed" },
-    { "device": "Logitech G325", "detail": "White wireless headset", "target": "LIGHTSPEED / Bluetooth", "port": "Connection method to be confirmed" },
+    { "device": "HP OMEN 25i", "detail": "Main monitor", "target": "Graphics card" },
+    { "device": "Razer BlackWidow V4", "detail": "Keyboard", "target": "Rear USB-A" },
+    { "device": "Logitech G502 X LIGHTSPEED", "detail": "White wireless mouse", "target": "LIGHTSPEED USB receiver" },
+    { "device": "Logitech G325", "detail": "White wireless headset", "target": "LIGHTSPEED / Bluetooth" },
     { "device": "Ethernet", "detail": "Main network connection", "target": "2.5 GbE LAN", "port": "RJ-45" }
   ],
   "upgrades": [
     { "name": "1-2 TB SSD", "why": "When 500 GB is no longer enough for games and everyday files." },
-    { "name": "32 GB DDR5-6000", "why": "When DDR5 pricing makes the upgrade worthwhile." },
+    { "name": "Second 16 GB DDR5-6000 stick", "why": "32 GB in dual channel, when DDR5 pricing makes it worthwhile." },
     { "name": "A more powerful GPU", "why": "When the RX 6600 XT no longer meets my needs at 1080p." }
   ]
 }

@@ -79,8 +79,9 @@ test('details work with a keyboard and expose the real connection and upgrade no
     await expect(page.locator('details').nth(i)).toHaveAttribute('open', '');
   }
 
-  await expect(page.getByText('Port to be confirmed after assembly')).toBeVisible();
-  await expect(page.getByText('32 GB DDR5-6000')).toBeVisible();
+  await expect(page.locator('.connection')).toHaveCount(data.connections.length);
+  await expect(page.locator('#connections-list')).not.toContainText('to be confirmed');
+  await expect(page.getByText('Second 16 GB DDR5-6000 stick')).toBeVisible();
   await expect(page.getByText(/100 Mbps Ethernet/)).toBeVisible();
   await page.keyboard.press('Space');
   await expect(page.locator('details').nth(2)).not.toHaveAttribute('open', '');
