@@ -19,7 +19,10 @@ test('English setup loads complete local images and a clean component list', asy
   await expect(page.locator('#pc')).not.toContainText('Planned');
   await expect(page.locator('#pc')).not.toContainText('Owned');
   await expect(page.locator('#pc')).not.toContainText('Not confirmed');
-  await expect(page.locator('#updated')).toHaveText('Last updated 18 September 2026');
+  const updated = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+    .format(new Date(`${data.updated}T00:00:00Z`));
+  await expect(page.locator('#updated')).toHaveText(`Last updated ${updated}`);
+  await expect(page.locator('#updated time')).toHaveAttribute('datetime', data.updated);
   await expect(page.locator('body')).not.toContainText(/[\u0400-\u04ff]/);
 
   for (const img of await page.locator('img').all()) {
