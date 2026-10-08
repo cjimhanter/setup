@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "gear": [
     {
       "category": "Monitor",
@@ -39,7 +39,7 @@
     { "category": "CPU", "name": "AMD Ryzen 7 7700X", "meta": "8 cores / 16 threads" },
     { "category": "GPU", "name": "Gigabyte Radeon RX 6600 XT Gaming OC Pro 8G", "meta": "8 GB GDDR6 · RDNA 2 · PCIe 4.0" },
     { "category": "Motherboard", "name": "MSI B650 Gaming Plus WiFi", "meta": "ATX · B650 · Wi-Fi" },
-    { "category": "Memory", "name": "Kingston FURY Beast", "meta": "16 GB · 2 × 8 GB · DDR5-5200 CL40" },
+    { "category": "Memory", "name": "Kingston FURY Beast", "meta": "16 GB · 1 × 16 GB · DDR5-6000 CL40" },
     { "category": "Storage", "name": "Samsung 980 500 GB NVMe", "meta": "System SSD" },
     { "category": "Power supply", "name": "FSP Hydro GT Pro 1000W Gold", "meta": "1000 W · 80 PLUS Gold" },
     { "category": "CPU cooler", "name": "Thermalright Peerless Assassin 120 Vision MAX", "meta": "Dual tower · ARGB" }
