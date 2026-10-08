@@ -36,7 +36,7 @@ The page is meant to work as a link someone can open from a stream and understan
 
 - real product images first;
 - short names and useful specs;
-- a light pink visual identity;
+- a pink visual identity in light and dark themes, following the system setting;
 - PC components without purchase-status badges;
 - technical details kept lower on the page;
 - no serial numbers, receipt numbers, IP addresses, credentials, or other private information.

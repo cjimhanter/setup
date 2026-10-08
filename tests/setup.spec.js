@@ -153,10 +153,14 @@ test('native software details and data link are available without JavaScript', a
   await context.close();
 });
 
-test('expanded setup has no WCAG A or AA accessibility violations', async ({ page }) => {
-  await page.goto('/');
-  await expect(page.locator('.gear-card')).toHaveCount(4);
-  for (const summary of await page.locator('summary').all()) await summary.click();
-  const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
-  expect(results.violations).toEqual([]);
-});
+for (const colorScheme of ['light', 'dark']) {
+  test(`expanded setup has no WCAG A or AA accessibility violations in ${colorScheme} mode`, async ({ page }) => {
+    await page.emulateMedia({ colorScheme });
+    await page.goto('/');
+    await expect(page.locator('.gear-card')).toHaveCount(4);
+    await expect(page.locator('body')).toHaveCSS('background-color', colorScheme === 'dark' ? 'rgb(21, 16, 21)' : 'rgb(255, 249, 252)');
+    for (const summary of await page.locator('summary').all()) await summary.click();
+    const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    expect(results.violations).toEqual([]);
+  });
+}
