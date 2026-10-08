@@ -13,7 +13,7 @@
   <title>My setup - cjimhanter</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
   <script>try { const theme = localStorage.getItem('theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}</script>
-  <link rel="stylesheet" href="./styles.css?v=13">
+  <link rel="stylesheet" href="./styles.css?v=14">
   <script src="./script.js?v=13" defer></script>
 </head>
 <body id="top">
@@ -38,7 +38,6 @@
   <main id="main" tabindex="-1">
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="little-star" aria-hidden="true">✳</span> MY SETUP</p>
         <h1 id="hero-title">Everything I use<br><em>Gaming &amp; work</em></h1>
         <p class="intro">The gear I use every day, plus the AM5 PC build behind it.</p>
         <a class="button" href="#gear">See the gear <span aria-hidden="true">↓</span></a>
@@ -65,7 +64,7 @@
 
     <section class="section shell" id="gear" aria-labelledby="gear-title">
       <div class="heading">
-        <div><p class="eyebrow">01 / GEAR</p><h2 id="gear-title">Peripherals</h2></div>
+        <div><h2 id="gear-title">Peripherals</h2></div>
         <p class="section-description">Monitor, keyboard, mouse and headset. <br>Product pages open in a new tab.</p>
       </div>
       <div id="gear-grid" class="gear-grid" aria-busy="true"><p class="loading">Loading gear...</p></div>
@@ -73,14 +72,13 @@
 
     <section class="section shell" id="pc" aria-labelledby="pc-title">
       <div class="heading">
-        <div><p class="eyebrow">02 / PC</p><h2 id="pc-title">The build</h2></div>
+        <div><h2 id="pc-title">The build</h2></div>
         <p class="section-description">AM5 at the core. <br>Simple to upgrade when it makes sense.</p>
       </div>
 
       <div class="pc-card">
         <div id="case-card" class="case-card" aria-busy="true"><p class="loading">Loading case...</p></div>
         <div class="spec-content">
-          <div class="spec-header"><span>COMPONENT</span></div>
           <dl id="pc-list" class="spec-list" aria-busy="true"><div class="loading"><dt>PC components</dt><dd>Loading...</dd></div></dl>
         </div>
       </div>
@@ -88,18 +86,18 @@
 
     <section class="section shell" id="details" aria-labelledby="details-title">
       <div class="heading">
-        <div><p class="eyebrow">03 / DETAILS</p><h2 id="details-title">The details</h2></div>
+        <div><h2 id="details-title">The details</h2></div>
         <p class="section-description">Connections, software and future upgrades.</p>
       </div>
 
       <div class="details-list">
         <details class="accordion">
-          <summary><span class="detail-number" aria-hidden="true">01</span><span class="accordion-title">Connections</span><span class="accordion-subtitle">Cables, ports &amp; wireless</span><span class="accordion-icon" aria-hidden="true"></span></summary>
+          <summary><span class="accordion-title">Connections</span><span class="accordion-subtitle">Cables, ports &amp; wireless</span><span class="accordion-icon" aria-hidden="true"></span></summary>
           <div class="accordion-panel"><div id="connections-list" class="connections" aria-busy="true"><p class="loading">Loading connections...</p></div></div>
         </details>
 
         <details class="accordion">
-          <summary><span class="detail-number" aria-hidden="true">02</span><span class="accordion-title">Network &amp; software</span><span class="accordion-subtitle">The things behind the scenes</span><span class="accordion-icon" aria-hidden="true"></span></summary>
+          <summary><span class="accordion-title">Network &amp; software</span><span class="accordion-subtitle">The things behind the scenes</span><span class="accordion-icon" aria-hidden="true"></span></summary>
           <div class="accordion-panel detail-copy">
             <div><h3>Network</h3><p>100 Mbps Ethernet connection. ExitLag for EuroAion. The motherboard has a 2.5 GbE LAN port.</p></div>
             <div><h3>Software</h3><p>Razer Synapse 3, Logitech G HUB, and Shygo / custom UI.</p></div>
@@ -107,7 +105,7 @@
         </details>
 
         <details class="accordion">
-          <summary><span class="detail-number" aria-hidden="true">03</span><span class="accordion-title">Upgrades</span><span class="accordion-subtitle">Only when there's a practical reason</span><span class="accordion-icon" aria-hidden="true"></span></summary>
+          <summary><span class="accordion-title">Upgrades</span><span class="accordion-subtitle">Only when there's a practical reason</span><span class="accordion-icon" aria-hidden="true"></span></summary>
           <div class="accordion-panel"><div id="upgrade-list" class="upgrades" aria-busy="true"><p class="loading">Loading upgrade plans...</p></div></div>
         </details>
       </div>
